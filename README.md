@@ -197,6 +197,7 @@ error[E0275]: overflow evaluating the requirement `&mut Peekable<std::vec::IntoI
          → Peekable<Peekable<A>>
            → Peekable<Peekable<Peekable<A>>>
              → ...
+```
 这导致编译器需要推导无限嵌套的类型结构
 
 
