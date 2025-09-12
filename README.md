@@ -239,7 +239,7 @@ pub fn parse_expression<T: Iterator<Item = String>>(
 
 #### 不要把事情搞复杂：从懒加载 HashMap 到 match 表达式
 
-每个操作符（Operator）都有对应的唯一的优先级和结合性等特性。在使用这些特性时，思维定式地想要用 HashMap 来存取，y 于是走了些弯路：
+每个操作符（Operator）都有对应的唯一的优先级和结合性等特性。在使用这些特性时，思维定式地想要用 HashMap 来存取，于是走了些弯路：
 
 ```rust
 // precedence only
