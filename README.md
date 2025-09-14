@@ -16,7 +16,7 @@ Readme 链接的公众号文章 [^2] 提到了表达式解析常用的算法，�
 
 ## 看一眼 Precedence Climbing 怎么个事儿
 
-让 DeepSeek ` 详细介绍一下 Precedence Climbing`，并给出伪码（Python——行走的伪码）：
+让 DeepSeek ` 详细介绍一下 Precedence Climbing`，并给出Python实现：
 
 ```python
 def parse_expression(min_precedence):
