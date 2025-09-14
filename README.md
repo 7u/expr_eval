@@ -10,13 +10,13 @@ Inspired by roseduan's expr-eval[^1]
 >
 > 根据运算符优先级来进行表达式计算，算法看起来非常简洁优雅，非常巧妙的利用优先级来解决运算的顺序和结合等问题。
 
-随即，我查看了 Readme 链接的公众号文章 [^2]。当然，我只看了介绍部分，没看具体实现过程。文章顺带提到了表达式解析常用的算法，比如逆波兰式，这个词让我瞬间梦回大学时代。那时就知道只需一个栈的数据结构就可以实现逆波兰式，进而做出一个可以加减乘除简单运算的计算器（一次学院组织的编程比赛中就有这道题，小弟不才:)，比赛得了个优胜奖）。而其中的关键信息还是：`expr-eval` 采用了 “基于运算符优先级的算法叫做 `Precedence Climbing`”。
+Readme 链接的公众号文章 [^2] 提到了表达式解析常用的算法，比如逆波兰式。而`expr-eval` 用了另外一个 “基于运算符优先级的算法叫做 `Precedence Climbing`”。
 
 
 
 ## 看一眼 Precedence Climbing 怎么个事儿
 
-我让 DeepSeek ` 详细介绍一下 Precedence Climbing`。它的回答还算完整，也给出了伪码（Python——行走的伪码）：
+让 DeepSeek ` 详细介绍一下 Precedence Climbing`，并给出伪码（Python——行走的伪码）：
 
 ```python
 def parse_expression(min_precedence):
@@ -44,7 +44,7 @@ def parse_expression(min_precedence):
 
 ### Reading list
 
-在正式开始对着伪码手撸 Rust 实现之前，我又 Google 了一番，找到了关于这个算法引用最多的两篇：
+网上关于这个算法引用最多的两篇：
 
 * 一篇来自 Eli Bendersky 的博文：`Parsing expressions by precedence climbing`[^3]
 * 一篇是 York College 的课程讲义：`CS 340: Lecture 6: Precedence Climbing, Abstract Syntax Trees`[^4]
